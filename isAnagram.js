@@ -4,14 +4,15 @@ const isAnagram = (str1, str2) => {
     } else {
         return false;
     }
-  };
-  isAnagram('elbow', 'elbow')
-  // Helper Function
-  let formatStr = (str) => {
+}
+
+    // Helper Function
+let formatStr = (str) => {
     return str
       .replace(/[^/w]/g, '')
       .toLowerCase()
       .split('')
       .sort()
       .join('')
-  };
+};
+console.log(isAnagram('elbow', 'elbow'))
