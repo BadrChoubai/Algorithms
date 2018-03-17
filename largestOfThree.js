@@ -8,7 +8,6 @@ const largestOfThree = (x, y, z) => {
     });
     console.log(findLargest[0]);
 };
-
 largestOfThree(18, 1, 30);
 
 
