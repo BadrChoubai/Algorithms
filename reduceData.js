@@ -14,30 +14,31 @@ let transportation = data.reduce((object, item) => {
 console.log(transportation);
 
 
-const inventors = [
-    { first: 'Elon', last: 'Musk', mode: 'car' },
-    { first: 'Kanye', last: 'West', mode: 'bus' },
-    { first: 'Jeff', last: 'Bezos', mode: 'car' },
-    { first: 'Nikola', last: 'Tesla', mode: 'car' },
-    { first: 'Bill', last: 'Gates', mode: 'bus' },
-    { first: 'Miguel', last: 'Kepler', mode: 'plane' },
-    { first: 'Tony', last: 'Stark', mode: 'bus' },
-    { first: 'Oprah', last: 'Winfrey', mode: 'car' },
-    { first: 'Hilton', last: 'Johanasson', mode: 'bus' },
-    { first: 'John', last: 'Smith', mode: 'bus' },
-    { first: 'Nawfel', last: 'Alami', mode: 'train' },
-    { first: 'Denver', last: 'Colorado', mode: 'train' }
-  ];
+const companies = [
+    { name: "US Bank", category: "Finance", start: 1981, end: 2004 },
+    { name: "Amazon", category: "Retail", start: 1992, end: 2008 },
+    { name: "Subaru", category: "Auto", start: 1999, end: 2007 },
+    { name: "Target", category: "Retail", start: 1989, end: 2010 },
+    { name: "Apple", category: "Technology", start: 2009, end: 2014 },
+    { name: "Charles Schwab", category: "Finance", start: 1987, end: 2010 },
+    { name: "Tesla", category: "Auto", start: 1986, end: 1996 },
+    { name: "Google", category: "Technology", start: 2011, end: 2016 },
+    { name: "Best Buy", category: "Retail", start: 1981, end: 1989 }
+];
 
-// What about an for an array of objects
+// count how many stores in each category
+
+const reduceCompanies = companies
+    .map(company => {return company.category})
+    .reduce((object, item) => {
+        if(!object[item]) {
+            object[item] =0;
+        }
+        object[item]++;
+        return object;
+    }, 
+    { }
+);  
 
 
-const inventorsMode = inventors.map((inventor) => inventor.mode);
-const inventorsModeReduced = inventorsMode.reduce((object, item) => {
-    if(!object[item]) {
-        object[item] = 0;
-    }
-    object[item]++;
-    return object;
-}, {});
-console.log(inventorsModeReduced)
+console.log(reduceCompanies);
