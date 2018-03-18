@@ -14,4 +14,4 @@ const quickSort = (array) => {
     return [...quickSort(left), pivot, ...quickSort(right)]
 }
 
-console.log(quickSort([1, 4, 6, 7, 3, 7, 9, 10, 63, 50, 90, 40, 1, 4, 7, 2, 6, 5, 2]))
+console.log(quickSort([1, 7.4, 6, 7, 1.3, 7, 9, 10.2, 63, 50, 9.6, 40.4, 1, 4, 7.2, 2, 6, 5.5, 2.1]))

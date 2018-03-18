@@ -15,4 +15,4 @@ let formatStr = (str) => {
       .sort()
       .join('')
 };
-console.log(isAnagram('elbow', 'elbow'))
+console.log(isAnagram('elbow', 'below'));
