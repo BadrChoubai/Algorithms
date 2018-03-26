@@ -1,11 +1,10 @@
 const largestOfThree = (x, y, z) => {
-    let numberArray = [];
-    numberArray.push(x);
-    numberArray.push(y);
-    numberArray.push(z);
+    let numberArray = [x, y, z];
+    console.log(numberArray);
     findLargest = numberArray.sort((a, b) => {
         return a < b;
     });
+    console.log(findLargest);
     console.log(findLargest[0]);
 };
 largestOfThree(18, 1, 30);
