@@ -1,13 +1,30 @@
 const countVowels = (string) => {
     const vowels = ['a', 'e', 'i', 'o', 'u'];
-    const stringArr = string.split('');
+    const vowelsInString =[];
+    const stringArr = string.toLowerCase().split('');
+    console.log(string);
     for (letter in stringArr) {
         for (vowel in vowels) {
             if (stringArr[letter] === vowels[vowel]) {
-                console.log(vowel + stringArr[letter]);
+                vowelsInString.push(vowels[vowel]);
             }
         }
     }
-}
+    reduceVowels = vowelsInString.reduce((vowel, vowels) => {
+        if(!vowel[vowels]) {
+            vowel[vowels] = 0;
+        }
+        vowel[vowels]++;
+        return vowel;
+    }, {});
+    console.log("vowels: ", reduceVowels)
+};
 
-console.log(countVowels("test"));
+console.log(countVowels("this is a string"));
+// i i a i 
+
+console.log(countVowels("I love javascript"));
+// i o e  a a i 
+
+console.log(countVowels("UPPERCASE STRING"));
+// u e a e i 
