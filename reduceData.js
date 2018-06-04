@@ -11,9 +11,6 @@ let transportation = data.reduce((object, item) => {
     return object;
 }, {});
 
-console.log(transportation);
-
-
 const companies = [
     { name: "US Bank", category: "Finance", start: 1981, end: 2004 },
     { name: "Amazon", category: "Retail", start: 1992, end: 2008 },
@@ -39,6 +36,3 @@ const reduceCompanies = companies
     }, 
     { }
 );  
-
-
-console.log(reduceCompanies);

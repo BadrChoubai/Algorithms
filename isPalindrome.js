@@ -7,7 +7,5 @@ const isPalindrome = (str) => {
     console.log(str === checkAgainst ? true : false);
 };
 
-console.log("racecar");
 isPalindrome("racecar");
-console.log("joyful");
 isPalindrome("joyful");

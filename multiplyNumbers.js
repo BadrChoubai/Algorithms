@@ -6,4 +6,3 @@ let multiplyNumbers = ([w, x, y], z) => {
 };
 
 let args = [[1, 2, 3], 3]
-console.log(multiplyNumbers(...args));
