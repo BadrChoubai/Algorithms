@@ -1,7 +1,6 @@
-let sumNumbers = (x, y, z) => {
-    array = [x, y, z];
-    let arrayToDouble = array.reduce((numA, numB) => numA + numB);
+let sumNumbers = (...args) => {
+    let arrayToDouble = args.reduce((numA = 0, numB = 0) => numA + numB, 0);
     return arrayToDouble;
 };
-let args = [3, 2, 2];
-console.log(sumNumbers(...args));
+
+console.log(sumNumbers(1, 2, 3, 4));
