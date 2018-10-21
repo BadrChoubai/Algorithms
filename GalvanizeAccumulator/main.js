@@ -103,12 +103,6 @@ Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should retur
 NOTE: you can assume each input will be the same length
 */
 
-function interleave(xArray, yArray) {
-
-};
-
-console.log(interleave(['a', 'b', 'c'], ['x', 'y', 'z']));
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -251,6 +245,21 @@ Example:
 If you pass "you" it should return 2
 */
 
+function countVowels(string) {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const vowelsInString = [];
+  const stringArr = [...string.toLowerCase()];
+  for (letter in stringArr) {
+    for (vowel in vowels) {
+      if (stringArr[letter] === vowels[vowel]) {
+        vowelsInString.push(vowels[vowel]);
+      }
+    }
+  }
+  return vowelsInString.length;
+};
+
+console.log(countVowels("TEST"));
 
 /*
 ----------------------------------------
@@ -367,11 +376,18 @@ If you pass "a", 3, "*" it should return "**a" - that is, a string of length 3, 
 */
 
 
+function leftPad(str, len, fillChar) {
+  let strArr = [...str];
+  if(strArr.length > len) return strArr.join('').toString();
+  for(let i = 0; i < len; i++) {
+    strArr.splice(i, i-len, fillChar);
+  }
+  return strArr.join('').substring(str.length);
+};
 
-
-
-
-
+console.log(leftPad("string", 7, "*"));
+console.log(leftPad("badr", 5, "_"))
+console.log(leftPad("badr", 2, "_"))
 
 /*
 ----------------------------------------
@@ -529,17 +545,14 @@ If you pass ["Sue", "Will"] it should return "Sue and Will"
 If you pass ["Sue", "Will", "Rachel"] it should return "Sue, Will and Rachel"
 */
 
+function some(array) {
+  let someArray = [...array]
+  someArray.splice(-1, 0, 'and');
+  return someArray.join(', ');
+};
 
-
-
-
-
-
-
-
-
-
-
+console.log(some(["Mumford", "Sons"]));
+console.log(some(["Badr", "Sophie", "Yassin", "Noor"]));
 
 /*
 ----------------------------------------
@@ -650,7 +663,6 @@ Example:
 
 If you pass {"contract": "foo"}, "Fred" it should return {"contract-signed": "foo - Fred"}
 */
-
 
 
 
