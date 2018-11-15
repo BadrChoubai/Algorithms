@@ -7,14 +7,10 @@ Challenge: Write function named test that returns the string "This Works!".
 Solution: This one has already been completed for you.
 
 */
-
 function test() {
   var string = "This Works!";
   return string;
 }
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -29,11 +25,9 @@ For example, the tests require that to complete this challenge, your function mu
 0 if the input is empty. Please see the README file for an explanation of how to expand the test
 results on the index page in the browser.
 */
-
 function sum(array) {
   return array.reduce((a, b) => a + b, 0);
 };
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -43,14 +37,12 @@ Write function named doubleLetters that will take a string and double every lett
 
 Example: if you pass it "abc" then it should return "aabbcc"
 */
-
 function doubleLetters(string) {
   let splitMapJoin = string.split('').map(letter => {
     return letter + letter
   }).join('');
   return splitMapJoin;
 }
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -60,17 +52,12 @@ Write function named doubleNumbers that will take an array of numbers and return
 
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
-
 function doubleNumbers(array) {
   let sumArray = array.map(number => {
     return number + number;
   })
   return sumArray;
 }
-
-console.log(doubleNumbers([1, 2, 3, 4]));
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -84,13 +71,10 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 0) you'd get [0,0,0]
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
-
 function multiplyNumbers(array, multiplier) {
   const multiplyArray = array.map(number => number * multiplier)
   return multiplyArray;
 };
-
-console.log(multiplyNumbers([1, 2, 3], 3));
 /*
 ----------------------------------------
 CHALLENGE
@@ -101,9 +85,7 @@ Write function named interleave that will take two arrays and interleaves them
 Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should return ["a", "d", "b", "e", "c", "f"]
 
 NOTE: you can assume each input will be the same length
-*/
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -112,7 +94,6 @@ Write function named createRange that will take a number and a default value and
 
 Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
 */
-
 function createRange(num, defVal) {
   let echoArr = [];
   for (i = 0; i < num; i++) {
@@ -120,7 +101,6 @@ function createRange(num, defVal) {
   }
   return echoArr;
 }
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -131,16 +111,7 @@ Write function named flipArray that will take an array and return an object wher
 Example:
 
 If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
-*/
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -151,9 +122,7 @@ Example:
 
 If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: "Horse", 2015: "Sheep" }
 
-*/
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -164,9 +133,15 @@ Example:
 
 If you pass it "hello" then it should return "olleh"
 */
-
-
-
+function reverseString(string) {
+  let stringLen = string.length;
+  let reversedString = [];
+  while(stringLen > 0) {
+    reversedString.push(string[stringLen-1]);
+    stringLen--
+  }
+  return reversedString.join('');
+};
 /*
 ----------------------------------------
 CHALLENGE
@@ -179,9 +154,7 @@ Example:
 If you pass it "haha" then it should return true because "ha" (the first half) equals "ha" (the second half)
 If you pass it "yay" then it should return false because it's odd
 If you pass it "heehaw" then it should return false because "hee" doesn't equal "haw"
-*/
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -192,14 +165,13 @@ Example:
 
 If you pass it "abcdef" then it should return "ace" because those represent every other letter
 */
-
-
-
-
-
-
-
-
+function everyOther(string) {
+  let everyOther = [];
+  for(let i = 0; i < string.length; i+=2) {
+    everyOther.push(string[i]);
+  }
+  return everyOther.join('');
+};
 /*
 ----------------------------------------
 CHALLENGE
@@ -212,14 +184,17 @@ Example:
 If you pass "aaa" it should return true
 If you pass "aba" it should return false
 */
-
-
-
-
-
-
-
-
+function allEqual(string) {
+  let checked = [];
+  let checkAgainst = string[0];
+  let length = string.length;
+  string.split('').forEach((letter, i) => {
+    if(letter === checkAgainst) {
+      checked.push(letter);
+    }
+  });
+  return string.length === checked.length;
+}
 /*
 ----------------------------------------
 CHALLENGE
@@ -232,7 +207,10 @@ Example:
 If you pass "45" it should return 9
 If you pass "246" it should return 12
 */
-
+function sumLetters(intStr) {
+  let intArr = intStr.split('');
+  return intArr.reduce((a, b) => parseInt(a) + parseInt(b), 0)
+}
 /*
 ----------------------------------------
 CHALLENGE
@@ -244,7 +222,6 @@ Example:
 
 If you pass "you" it should return 2
 */
-
 function countVowels(string) {
   const vowels = ['a', 'e', 'i', 'o', 'u'];
   const vowelsInString = [];
@@ -258,9 +235,6 @@ function countVowels(string) {
   }
   return vowelsInString.length;
 };
-
-console.log(countVowels("TEST"));
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -274,13 +248,10 @@ If you pass "you" it should return ["y", "o", "u"]
 
 NOTE: do not use the builtin `split` method
 */
-
 function split(string) {
   letterArr = [...string];
   return letterArr;
-}
-console.log(split('test'));
-
+};
 /*
 ----------------------------------------
 CHALLENGE
@@ -294,7 +265,6 @@ Example:
 
 If you pass "Hello" it should return [ 72, 101, 108, 108, 111 ]
 */
-
 function getCodePoints(string) {
   let codePointsArr = [];
   for (let i = 0; i < string.length; i++) {
@@ -313,9 +283,7 @@ Example:
 
 If you pass "Yo" it should return {Y: 0, o: 1}
 If you pass "Hello" it should return {H: 0, e: 1, l: 3, o: 4}
-*/
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -327,7 +295,6 @@ Example:
 If you pass "Yo" it should return {Y: 1, o: 1}
 If you pass "Hello" it should return {"H": 1, "e": 1, "l": 2, "o": 1}
 */
-
 function letterCount(string) {
   let letterArr = [...string];
   return letterArr.reduce((x, y) => {
@@ -338,9 +305,6 @@ function letterCount(string) {
     return x;
   }, {})
 };
-
-console.log(letterCount('Badr choubai'));
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -352,18 +316,7 @@ Example:
 
 If you pass 0,2 it should return false because the only number between 0 and 2 is 1
 If you pass 0,6 it should return true because between 0 and six (the numbers 1,2,3,4,5) there are three odds - 1, 3 and 5
-*/
-
-
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -374,21 +327,14 @@ Example:
 
 If you pass "a", 3, "*" it should return "**a" - that is, a string of length 3, padded on the left by the "*" character
 */
-
-
 function leftPad(str, len, fillChar) {
   let strArr = [...str];
-  if(strArr.length > len) return strArr.join('').toString();
-  for(let i = 0; i < len; i++) {
-    strArr.splice(i, i-len, fillChar);
+  if (strArr.length > len) return strArr.join('').toString();
+  for (let i = 0; i < len; i++) {
+    strArr.splice(i, i - len, fillChar);
   }
   return strArr.join('').substring(str.length);
 };
-
-console.log(leftPad("string", 7, "*"));
-console.log(leftPad("badr", 5, "_"))
-console.log(leftPad("badr", 2, "_"))
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -401,7 +347,6 @@ Example:
 If you pass "a", 3 it should return "aaa"
 If you pass "b", 3 it should return "bb"
 */
-
 function createString(number, letter) {
   let echoArr = [];
   for (let i = 0; i < number; i++) {
@@ -409,9 +354,6 @@ function createString(number, letter) {
   }
   return echoArr.join('');
 };
-
-console.log(createString(4, "a"));
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -426,7 +368,13 @@ Example:
 If you pass 4 it should return 24 since that's 4 * 3 * 2 * 1
 If you pass 5 it should return 120 since that's 5 * 4 * 3 * 2 * 1
 */
-
+function factorial(number) {
+  let numberArr = [];
+  for (let i = 1; i <= number; i++) {
+    numberArr.push(i)
+  }
+  return numberArr.reverse().reduce((a, b) => a * b, 1);
+};
 /*
 ----------------------------------------
 CHALLENGE
@@ -439,7 +387,6 @@ Example:
 If you pass 1 it should return [1]
 If you pass 3 it should return [1,2,3]
 */
-
 function arrayOfNumbers(number) {
   let numArr = [];
   for (let i = 0; i < number; i++) {
@@ -447,11 +394,6 @@ function arrayOfNumbers(number) {
   };
   return numArr;
 };
-
-console.log(arrayOfNumbers(10));
-console.log(arrayOfNumbers(3));
-console.log(arrayOfNumbers(1));
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -462,17 +404,7 @@ Write a function named evenOdd that takes a number and returns an object with th
 Example:
 
 If you pass 1,4 it should return {"1": "odd", "2": "even", "3": "odd", "4": "even"}
-*/
-
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -482,18 +414,7 @@ Write a function named growingKeys that takes a number and a string and returns 
 Example:
 
 If you pass 2,"d" it should return {"d": true, "dd": true}
-*/
-
-
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -505,14 +426,16 @@ Example:
 If you pass [1,1], 1 it should return true
 If you pass [1,2], 1 it should return false
 */
-
-
-
-
-
-
-
-
+function every(array, check) {
+  let checked = [];
+  let length = array.length;
+  array.forEach(number => {
+    if (number === check) {
+      checked.push(number);
+    }
+  })
+  return checked.length === length;
+}
 /*
 ----------------------------------------
 CHALLENGE
@@ -529,9 +452,6 @@ If you pass [3,2], 1 it should return false
 function some(array, value) {
   return array.includes(value);
 };
-console.log(some([1, 2, 3, 4, 5, 6], 2));
-console.log(some([1, 2, 3, 4, 5, 6], 7));
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -544,16 +464,11 @@ Example:
 If you pass ["Sue", "Will"] it should return "Sue and Will"
 If you pass ["Sue", "Will", "Rachel"] it should return "Sue, Will and Rachel"
 */
-
 function some(array) {
   let someArray = [...array]
   someArray.splice(-1, 0, 'and');
   return someArray.join(', ');
 };
-
-console.log(some(["Mumford", "Sons"]));
-console.log(some(["Badr", "Sophie", "Yassin", "Noor"]));
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -566,7 +481,6 @@ Example:
 If you pass ["Sue", "Will"] it should return "SW"
 If you pass ["Java", Script", "Object", "Notation"] it should return "JSON"
 */
-
 function acronym(array) {
   let wordArr = [];
   if (array.length >= 1) {
@@ -577,17 +491,6 @@ function acronym(array) {
   }
   return "";
 };
-
-console.log(acronym(["Java", "Script", "Object", "Notation"]));
-console.log(acronym(["how", "now", "brown", "cow"]));
-console.log(acronym(["cat", "bird"]));
-console.log(acronym([]));
-
-
-
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -599,17 +502,9 @@ Example:
 
 If you pass [0,-3,2,5] it should return -3
 */
-
-
-
-
-
-
-
-
-
-
-
+function min(numArr) {
+  return numArr.reduce((a, b) => a < b ? a : b, 0);
+}
 /*
 ----------------------------------------
 CHALLENGE
@@ -621,16 +516,7 @@ Example:
 
 If you pass [{id: 1, name: "Joe"}, {id: 2, name: "Sue"}] it should return {1: {id: 1, name: "Joe"}, 2: {id: 2, name: "Sue"}}
 
-*/
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -640,16 +526,7 @@ Write a function named invert that takes an object and returns an object where t
 Example:
 
 If you pass {id: 1, name: "Joe"} it should return {1: "id", Joe: "name"}
-*/
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -662,15 +539,7 @@ Write a function named addSignature that takes an object and a name, and returns
 Example:
 
 If you pass {"contract": "foo"}, "Fred" it should return {"contract-signed": "foo - Fred"}
-*/
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -680,16 +549,7 @@ Write a function named pairs that takes an object and returns an array of string
 Example:
 
 If you pass {name: "Will", age: 24} it should return ["name - will", "age - 24"]
-*/
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -700,14 +560,13 @@ Example:
 
 If you pass {a: 1, b: 2} it should return 3
 */
-
-
-
-
-
-
-
-
+function sumValues(object) {
+  let initialVal = 0;
+  for (const value in object) {
+    initialVal+=object[value];
+  }
+  return initialVal;
+};
 /*
 ----------------------------------------
 CHALLENGE
@@ -718,22 +577,7 @@ Write a function named biggestProperty that takes an object and returns the name
 Example:
 
 If you pass {1999: 4036, 2000: 7654} it should return '2000'
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -743,18 +587,7 @@ Write a function named keyForValue that takes an object and a value and returns 
 Example:
 
 If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
-*/
-
-
-
-
-
-
-
-
-
-
-/*
+*//*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
@@ -764,14 +597,4 @@ Write a function named containsValue that takes an object and a value and return
 Example:
 
 If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
-*/
-
-
-
-
-
-
-
-
-
-//
+*///
