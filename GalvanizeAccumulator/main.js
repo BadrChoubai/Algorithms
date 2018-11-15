@@ -85,7 +85,15 @@ Write function named interleave that will take two arrays and interleaves them
 Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should return ["a", "d", "b", "e", "c", "f"]
 
 NOTE: you can assume each input will be the same length
-*//*
+*/
+function interleave(arr1, arr2) {
+  let interleaveArr = [];
+  for(let i = 0; i < arguments[0].length; i++) {
+    interleaveArr.push(arr1[i], arr2[i]);
+  }
+  return interleaveArr;
+};
+/*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
