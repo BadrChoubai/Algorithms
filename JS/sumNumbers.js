@@ -1,6 +1,3 @@
-let sumNumbers = (...args) => {
-    let arrayToDouble = args.reduce((numA = 0, numB = 0) => numA + numB, 0);
-    return arrayToDouble;
-};
+let sumNumbers = (...args) => args.reduce((numA, numB) => numA + numB, 0);
 
-console.log(sumNumbers(1, 2, 3, 4));
+console.log(sumNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));

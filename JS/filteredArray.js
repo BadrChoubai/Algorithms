@@ -9,5 +9,3 @@ function filteredArray(arr, elem) {
     return newArr;
   }
   
-  // change code here to test different cases:
-  console.log(filteredArray([[1, 2, 3], [1, 2, 3], [1, 2, 3], [4, 5, 6]], 1));
