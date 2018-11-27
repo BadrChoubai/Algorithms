@@ -14,5 +14,3 @@ const countOccurence = (array, n, x) => {
 }
 
 const stray = numbers => numbers.filter(number => countOccurence(numbers, numbers.length, number) <= 1)[0];
-stray([1, 1, 2])/*?*/;
-stray([17, 17, 3, 17, 17, 17, 17])/*?*/;

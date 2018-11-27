@@ -4,6 +4,3 @@ const largestOfThree = (x, y, z) => {
     return findLargest[0]
 };
 
-largestOfThree(18, 1, 30);
-
-

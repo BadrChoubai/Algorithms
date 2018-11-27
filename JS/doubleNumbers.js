@@ -5,4 +5,3 @@ let doubleNumbers = (x, y, z) => {
 };
 
 let args = [3, 2, 2];
-console.log(doubleNumbers(...args));

@@ -14,5 +14,3 @@ const gimme = (inputArray) => {
     }
   }
 };
-
-gimme([5, 10, 14])/*?*/;
