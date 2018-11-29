@@ -1,6 +1,6 @@
 const countVowels = (string) => {
     const vowels = ['a', 'e', 'i', 'o', 'u'];
-    const vowelsInString =[];
+    const vowelsInString = [];
     const stringArr = string.toLowerCase().split('');
     for (letter in stringArr) {
         for (vowel in vowels) {
@@ -10,13 +10,13 @@ const countVowels = (string) => {
         }
     }
     reduceVowels = vowelsInString.reduce((vowel, vowels) => {
-        if(!vowel[vowels]) {
+        if (!vowel[vowels]) {
             vowel[vowels] = 0;
         }
         vowel[vowels]++;
         return vowel;
     }, {});
-    console.log("vowels: ", reduceVowels)
+    return reduceVowels;
 };
 
 console.log(countVowels("this is a string"));
