@@ -1,0 +1,1 @@
+const mutation = (arr) => [...arr[1].toLowerCase()].every((letter) => [...arr[0].toLowerCase()].indexOf(letter) !== -1);
