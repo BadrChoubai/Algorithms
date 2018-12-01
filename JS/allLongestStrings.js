@@ -1,8 +1,9 @@
 function allLongestStrings(inputArray) {
     let maxSize = Math.max(...inputArray.map(x => x.length));
-    console.log(maxSize);
-    let filteredArray = inputArray.filter(x => x.length === maxSize);
-    return filteredArray
+    return inputArray.filter(x => x.length === maxSize);
 }
+ 
+// const allLongestStrings = (inputArray) =>   
 
-allLongestStrings(['this', 'is', 'an', 'array', 'of', 'strings']);
+
+allLongestStrings(['this', 'is', 'an', 'array', 'of', 'strings', 'and', 'numbers'])/*?*/;

@@ -7,5 +7,4 @@ function filteredArray(arr, elem) {
         }
     }
     return newArr;
-  }
-  
+}

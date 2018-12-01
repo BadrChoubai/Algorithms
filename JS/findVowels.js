@@ -9,7 +9,7 @@ const countVowels = (string) => {
             }
         }
     }
-    reduceVowels = vowelsInString.reduce((vowel, vowels) => {
+    let reduceVowels = vowelsInString.reduce((vowel, vowels) => {
         if (!vowel[vowels]) {
             vowel[vowels] = 0;
         }

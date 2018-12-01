@@ -26,7 +26,7 @@ const companies = [
 // count how many stores in each category
 
 const reduceCompanies = companies
-    .map(company => {return company.category})
+    .map(company => company.category)
     .reduce((object, item) => {
         if(!object[item]) {
             object[item] =0;

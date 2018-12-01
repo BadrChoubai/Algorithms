@@ -1,10 +1,4 @@
-const sumOfArrayMatrices = (arrays) => {
-    let flattenedArray = arrays.reduce(
-        (a, b) => a.concat(b), 
-        []
-    );
-    return flattenedArray.reduce((a, b) => a + b, 0);
-};
+const sumOfArrayMatrices = arrays => arrays.reduce((a, b) => a.concat(b), [] ).reduce((a, b) => a + b);
 
 let arrayMatrix = [
     [1, 2, 3],  // 6
@@ -13,4 +7,4 @@ let arrayMatrix = [
     // the sum of all value in the array should be 45
 ];
 
-console.log(sumOfArrayMatrices(arrayMatrix));
+sumOfArrayMatrices(arrayMatrix);/*?*/

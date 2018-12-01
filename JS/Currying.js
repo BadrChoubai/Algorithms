@@ -1,9 +1,3 @@
-const sumThree = (x) => {
-  return (y) => {
-    return (z) => {
-      return x + y + z;
-    }
-  }
-};
+const currySumThree = (x) => (y) => (z) => x + y + z
 
-console.log(sumThree(1)(2)(3));
+currySumThree(currySumThree(2)(2)(2))/*?*/;;
