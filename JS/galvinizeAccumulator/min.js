@@ -1,0 +1,1 @@
+const min = (numArr) => Math.min(...numArr);

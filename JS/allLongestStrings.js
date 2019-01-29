@@ -3,7 +3,4 @@ function allLongestStrings(inputArray) {
     return inputArray.filter(x => x.length === maxSize);
 }
  
-// const allLongestStrings = (inputArray) =>   
-
-
 allLongestStrings(['this', 'is', 'an', 'array', 'of', 'strings', 'and', 'numbers'])/*?*/;
