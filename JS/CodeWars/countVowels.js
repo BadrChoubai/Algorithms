@@ -4,4 +4,4 @@ const countVowels = (str) => {
   return count;
 }
 
-countVowels('this is a vowel')/*?*/;
+countVowels('this is a vowel');

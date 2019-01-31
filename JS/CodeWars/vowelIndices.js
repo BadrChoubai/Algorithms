@@ -3,5 +3,5 @@ const vowelIndices = (word, VOWELS = ['a', 'e', 'i', 'o', 'u', 'y'], indices=[])
   return indices;
 };
 
-vowelIndices('vowels')/*?*/;
-vowelIndices('supercalifragilisticexpialidocious')/*?*/;
+vowelIndices('vowels');
+vowelIndices('supercalifragilisticexpialidocious');
