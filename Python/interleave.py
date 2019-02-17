@@ -1,12 +1,12 @@
 def interleave(arr1, arr2):
   i = 0
-  interloven = []
+  interwoven = []
   while i < len(arr1):
-    interloven.append(arr1[i])
-    interloven.append(arr2[i])
+    interwoven.append(arr1[i])
+    interwoven.append(arr2[i])
     i+=1
 
-  print(interloven)
+  print(interwoven)
 
 if __name__ == "__main__":
     interleave(["a", "b", "c"], ["d", "e", "f"])
