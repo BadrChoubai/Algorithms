@@ -6,8 +6,7 @@ func interleave(arr1 []string, arr2 []string) []string {
 
 	i := 0
 	for i < len(arr1) {
-		slice := interweave[:]
-		interweave = append(slice, arr1[i], arr2[i])
+		interweave = append(interweave[:], arr1[i], arr2[i])
 		i++
 	}
 
