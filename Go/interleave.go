@@ -12,9 +12,3 @@ func interleave(arr1 []string, arr2 []string) []string {
 
 	return interweave
 }
-
-func main() {
-	arr1 := []string{"a", "b", "c"}
-	arr2 := []string{"d", "e", "f"}
-	interleave(arr1, arr2)
-}

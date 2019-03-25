@@ -7,7 +7,3 @@ func reverseString(str string) string {
 	}
 	return string(letters)
 }
-
-func main() {
-	reverseString("go-lang")
-}

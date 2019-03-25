@@ -15,7 +15,3 @@ func fizzBuzz() {
 		}
 	}
 }
-
-func main() {
-	fizzBuzz()
-}
