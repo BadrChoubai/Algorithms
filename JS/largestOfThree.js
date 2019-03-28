@@ -1,6 +1,4 @@
-const largestOfThree = (x, y, z) => {
-    let numberArray = [x, y, z];
-    findLargest = numberArray.sort((a, b) => a < b);
-    return findLargest[0]
-};
+const largestOfThree = (x, y, z) => Math.max(x, y, z);
+
+console.log(largestOfThree(1048, 3617, 9842));
 
