@@ -7,4 +7,4 @@ let arrayMatrix = [
     // the sum of all value in the array should be 45
 ];
 
-sumOfArrayMatrices(arrayMatrix);/*?*/
+sumOfArrayMatrices(arrayMatrix);
