@@ -1,6 +1,5 @@
 package main
 
-// This algorithm will assume that both arrays being passed in are the same length
 func interleave(arr1 []string, arr2 []string) []string {
 	interweave := make([]string, 0)
 
@@ -11,4 +10,8 @@ func interleave(arr1 []string, arr2 []string) []string {
 	}
 
 	return interweave
+}
+
+func main() {
+	interleave([]string{"A", "B", "C"}, []string{"d", "e", "f"})
 }

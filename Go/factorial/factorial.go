@@ -9,5 +9,5 @@ func factorial(n int) int {
 }
 
 func main() {
-	factorial(12)
+	factorial(10)
 }

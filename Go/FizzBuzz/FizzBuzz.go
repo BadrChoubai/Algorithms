@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func fizzBuzz() {
+func fizzbuzz() {
 	for i := 1; i <= 100; i++ {
 		if i%15 == 0 {
 			fmt.Println("Fizzbuzz")
@@ -14,4 +14,8 @@ func fizzBuzz() {
 			fmt.Println(i)
 		}
 	}
+}
+
+func main() {
+	fizzbuzz()
 }
