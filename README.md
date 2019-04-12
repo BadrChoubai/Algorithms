@@ -7,6 +7,3 @@
   - [Galvanize Accumulator](https://github.com/BadrChoubai/Algorithms/tree/master/JS/galvinizeAccumulator)
 - [Python](https://github.com/BadrChoubai/Algorithms/edit/master/Python)
 - [Go](https://github.com/BadrChoubai/Algorithms/edit/master/Go)
-
-
-
