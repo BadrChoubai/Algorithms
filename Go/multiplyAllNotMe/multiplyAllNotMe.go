@@ -18,7 +18,7 @@ func multiplyAllNotMe(input []int) []int {
 
 func main() {
 	multiplyAllNotMe([]int{1, 2, 3, 4, 5}) // [120, 60, 40, 30, 24];
-	multiplyAllNotMe([]int{3, 2, 1})       // [2, 3, 6];
+	multiplyAllNotMe([]int{3, 2, 1})       // [2, 3, 6]; // [2, 3, 6];
 }
 
 /*
