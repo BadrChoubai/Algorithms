@@ -10,6 +10,7 @@ func main() {
 	fmt.Println(jobScheduler(sayHi(), 2000))
 	fmt.Println(jobScheduler(sayHi(), 3000))
 	fmt.Println(typeof(jobScheduler))
+	fmt.Println(typeof(sayHi))
 }
 
 func sayHi() string {
