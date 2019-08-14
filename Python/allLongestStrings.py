@@ -1,4 +1,4 @@
-def allLongestStr():
+def allLongestStr() -> list:
   array = ["long", "longer", "longest",
            "short",  "shorter", "shortest", "testing"]
   longestWords = []

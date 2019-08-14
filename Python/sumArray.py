@@ -1,4 +1,4 @@
-def sumArr(arr=[1, 2, 3, 4, 5]):
+def sumArr(arr: list) -> int:
     i = 0
     result = 0
     while i < len(arr):
@@ -8,4 +8,4 @@ def sumArr(arr=[1, 2, 3, 4, 5]):
 
 
 if __name__ == "__main__":
-	sumArr()
+	sumArr([1,2,3,4,5])

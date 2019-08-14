@@ -1,4 +1,4 @@
-def makeLetterPairsArray(input_array):
+def makeLetterPairsArray(input_array: list) -> list:
     letter_pairs_array = []
 
     for string in input_array:

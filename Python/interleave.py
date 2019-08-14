@@ -1,4 +1,4 @@
-def interleave(arr1, arr2):
+def interleave(arr1: list, arr2: list) -> list:
   i = 0
   interwoven = []
   while i < len(arr1):
