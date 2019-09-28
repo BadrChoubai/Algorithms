@@ -1,10 +1,13 @@
-function reverseInPlace(nums) {
-  for(let i = 0; i < Math.round(nums.length / 2); i++) {
-    swap = nums[i];
-    nums[i] = nums[nums.length - 1 - i];
-    nums[nums.length-1-i] = swap;
+function reverseInPlace(array) {
+  for(let i = 0; i < Math.round(array.length / 2); i++) {
+    const swap = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length-1-i] = swap;
+    
+    /*
+     * Another way to do it that is less readable 
+     * [array[i], array[array.length - 1 - i]] = [array[array.length - 1 - i], array[i]]
+     **/
   };
-  return nums;
+  return array;
 };
-
-console.log(reverseInPlace([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));

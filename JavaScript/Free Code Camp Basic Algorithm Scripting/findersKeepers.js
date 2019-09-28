@@ -1,1 +1,1 @@
-const findElement = (arr, func) => arr.filter(num => func(num))[0];
+const findElement = (arr, predicate) => arr.filter(num => predicate(num))[0];
