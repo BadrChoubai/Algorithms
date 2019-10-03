@@ -1,1 +1,0 @@
-let doubleNumbers = (...arguments) => [...arguments].map(number => parseInt(number) * 2);

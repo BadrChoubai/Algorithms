@@ -1,1 +1,0 @@
-const bouncer = input => input.filter(Boolean);

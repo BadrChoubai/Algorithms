@@ -1,1 +1,0 @@
-const chained = (functions) => (input) => functions.reduce((input, fn) => fn(input), input);
