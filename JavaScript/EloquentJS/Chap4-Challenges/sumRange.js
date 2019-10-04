@@ -29,6 +29,5 @@ const range = (start, end, step) => {
 const sum = (input) => input.reduce((x, y) => x+y);
 
 let test = sum(range(1, 10));
-console.log(test);
 
 
