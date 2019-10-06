@@ -15,5 +15,6 @@ function reverseInPlace(input) {
   return input;
 }
 
-console.log(reverseInPlace([1, 2, 3, 4, 5]));
-console.log(reverseInPlace(['a', 'b', 'c', 'd', 'e']));
+module.exports = {
+  reverseInPlace,
+}

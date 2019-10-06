@@ -45,4 +45,4 @@ function deepFlatten(input) {
   return reverseInPlace(res);
 }
 
-console.log(deepFlatten([1, [2,3], [4, [5, 6]], [7, [8, [9, [10]]]]]));
+deepFlatten([1, [2,3], [4, [5, 6]], [7, [8, [9, [10]]]]]);
