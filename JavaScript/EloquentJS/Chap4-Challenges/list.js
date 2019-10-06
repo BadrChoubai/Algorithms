@@ -1,11 +1,11 @@
 /**
- * @function arrayToLinkedList
+ * @function arrayToList
  * @param {Array} input
  * @description
  * Write a function that takes an array and returns
  * a singley linked list
  */
-function arrayToLinkedList(input) {
+function arrayToList(input) {
   let list = null;
 
   for(let i = input.length - 1; i >= 0; i--) {
@@ -18,5 +18,3 @@ function arrayToLinkedList(input) {
   return list;
 }
 
-arrayToLinkedList([1,2,3,4]);
-arrayToLinkedList(['a','b','c','d']);
