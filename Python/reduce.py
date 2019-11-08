@@ -1,8 +1,8 @@
 import functools
 
 
-def reduce_array(array: [int], operator: str) -> [int]:
-	def _sum(array) -> [int]:
+def reduce_array(array: [int], operator: str) -> int:
+	def _sum(array: [int]) -> int:
 		i = 0
 		result = 0
 		while i < len(array):
@@ -12,7 +12,7 @@ def reduce_array(array: [int], operator: str) -> [int]:
 		return result
 					
 
-	def _difference(array) -> [int]:
+	def _difference(array: [int]) -> int:
 		i = 0
 		result = 0
 		while i < len(array):
@@ -21,7 +21,7 @@ def reduce_array(array: [int], operator: str) -> [int]:
 
 		return result
 
-	def _product(array) -> [int]:
+	def _product(array: [int]) -> int:
 		i = 0
 		result = 1
 		while i < len(array):
@@ -31,7 +31,7 @@ def reduce_array(array: [int], operator: str) -> [int]:
 		return result
 
 
-	def _quotient(array) -> [int]:
+	def _quotient(array: [int]) -> int:
 		i = 0
 		result = 1
 		while i < len(array):
@@ -41,7 +41,7 @@ def reduce_array(array: [int], operator: str) -> [int]:
 		return result
 
 
-	def output(operator):
+	def output(operator: str) -> int:
 		return {
 			'+': _sum(array),
 			'-': _difference(array),
