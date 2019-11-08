@@ -1,15 +1,15 @@
-def allLongestStr() -> list:
+def all_longest_string() -> list:
   array = ["long", "longer", "longest",
            "short",  "shorter", "shortest", "testing"]
-  longestWords = []
+  longest_words = []
 
   for word in array:
     longestWord = max(array)
     if len(word) >= len(longestWord):
-        longestWords.append(word)
+        longest_words.append(word)
 
-  return longestWords
+  return longest_words
 
 
 if __name__ == "__main__":
-  print(allLongestStr())
+  print(all_longest_string())

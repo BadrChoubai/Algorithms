@@ -1,4 +1,4 @@
-def makeLetterPairsArray(input_array: list) -> list:
+def make_letter_pairs(input_array: list) -> list:
     letter_pairs_array = []
 
     for string in input_array:
@@ -11,5 +11,5 @@ def makeLetterPairsArray(input_array: list) -> list:
 
 
 if __name__ == "__main__":
-    print(makeLetterPairsArray(
+    print(make_letter_pairs(
         ["badr", "sophie", "youssef", "yassin", "dounia", "noor"]))
