@@ -1,24 +1,29 @@
-# 
-# 	Given a string and an integer k 
-# 	you need to reverse the first k characters for every 2k characters counting from the start of the string. 
-# 	If there are less than k characters left, reverse all of them. 
-# 	If there are less than 2k but greater than or equal to k characters, 
-# 	then reverse the first k characters and left the other as original. 
+#
+# 	Given a string and an integer k
+# 	you need to reverse the first k characters for every 2k characters counting from the start of the string.
+# 	If there are less than k characters left, reverse all of them.
+# 	If there are less than 2k but greater than or equal to k characters,
+# 	then reverse the first k characters and left the other as original.
 #
 
-# def reverse_string(string: str, k: int) -> str:
-# 	array = list(string)
-# 	for i in range(0, len(array), k*2):
-# 		array[i:i+k] = reversed(array[i:i+k])
 
-# 	return array
+def reverse_string_one(string: str, k: int) -> str:
+	string_as_array = list(string)
+	for i in range(0, len(string_as_array), k*2):
+		string_as_array[i:i+k] = reversed(string_as_array[i:i+k])
 
-# 
-# Write a function that reverses a string. The input string is given as an array of characters char[].
-# Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-# You may assume all the characters consist of printable ascii characters.
-# 
+	return ''.join(string_as_array)
 
-def reverse_string(str_arr: [str]) -> str:
-	str_arr[:]=str_arr[::-1]
-	return str_arr
+#
+# Write a function that reverses a string.
+#
+
+
+def reverse_string_two(string: str) -> str:
+	return string[::-1]
+
+
+if __name__ == "__main__":
+	reversed_one = reverse_string_one("Badr Choubai", 4)
+	reversed_two = reverse_string_two("Badr Choubai")
+	print(reversed_one, reversed_two)
