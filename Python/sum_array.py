@@ -1,11 +1,12 @@
-def sumArr(arr: list) -> int:
+def sum_array(arr: list) -> int:
     i = 0
     result = 0
     while i < len(arr):
         result += arr[i]
         i += 1
-    print(result)
+
+    return result
 
 
 if __name__ == "__main__":
-	sumArr([1,2,3,4,5])
+	sum_array([1, 2, 3, 4, 5])
