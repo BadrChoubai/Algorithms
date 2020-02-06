@@ -1,7 +1,7 @@
 class CheckSeason
-
-
-  def self.season(month)
+  def self.season_for(month)
+    month = month.downcase
+    
     case month
     in "march" | "april" | "may"
       "Spring"
@@ -13,8 +13,9 @@ class CheckSeason
       "Winter"
     end
   end
-
-
 end
 
-puts CheckSeason.season("march")
+puts CheckSeason.season_for("march")
+puts CheckSeason.season_for("august")
+puts CheckSeason.season_for("october")
+puts CheckSeason.season_for("february")
