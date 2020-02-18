@@ -1,4 +1,7 @@
-# Algorithms
+# Coding Challenge Solutions
+
+Description: These are solutions to coding challenges I've solved from a variety of sources \
+Languages: JavaScript, Python, Ruby 
 
 ## Languages
 
